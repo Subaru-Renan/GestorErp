@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d1117;
+}
+
+/* Reset e Background Geral inspirado nas referências escuras/clean */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0b0b0c; /* Fundo escuro profundo da Ref 4 */
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container que centraliza o box na tela */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 90px;
+}
+
+/* Box de Login (Estilo do Card das referências) */
+.login-box {
+  background-color: #16161a; /* Card ligeiramente mais claro que o fundo */
+  border: 1px solid #222227;
+  border-radius: 12px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Títulos */
+.login-box h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login-box p {
+  color: #8a8a93;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* Formulário e Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  background-color: #1f1f24;
+  border: 1px solid #2e2e35;
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Detalhe em verde ao focar no input */
+input:focus {
+  border-color: #00ff87;
+  box-shadow: 0 0 0 1px #00ff87;
+}
+
+/* Container da Senha (Input + Botão de Olho) */
+.senha-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Botão de mostrar/ocultar senha */
+.btn-ver-senha {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #8a8a93;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.btn-ver-senha:hover {
+  color: #00ff87; /* Detalhe em verde sutil no hover do olho */
+}
+
+/* Botão Entrar (Estilo sólido com feedback em verde) */
+button[type="submit"] {
+  width: 100%;
+  background-color: #ffffff; /* Botão claro contrastante da referência */
+  color: #0b0b0c;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+/* Efeito ao passar o mouse: Ganha o brilho verde */
+button[type="submit"]:hover {
+  background-color: #00ff87; /* Muda para verde no hover */
+  box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
+}
+
+/* Mensagens de Feedback */
+span.sucesso {
+  display: block;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #00ff87; /* Verde para sucesso */
+  background-color: rgba(0, 255, 135, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 255, 135, 0.2);
+}
+
+span.erro {
+  display: block;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #ff4a4a; /* Vermelho para erro */
+  background-color: rgba(255, 74, 74, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 74, 74, 0.2);
+}
